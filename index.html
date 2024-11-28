@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            
+        }
+        .left,
+        .right {
+            width: 200px;
+            height: 150px;
+            background-color: green;
+            background-image: url(land.jpg);
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .river {
+            width: 700px;
+            height: 150px;
+            background-image: url(river.avif);
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+        }
+
+        .board {
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            cursor: pointer;
+            transition: 3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 0;
+            background-image: url(ship.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .board-initial {
+            transform: translateX(0px);
+        }
+
+        .board-final {
+            transform: translateX(500px);
+        }
+
+        .wolf {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            background-image: url(wolf.webp);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .lamb {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background-image: url(lamb.webp);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .cabbage {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background-image: url(cabbage.webp);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .cabbage:hover,
+        .wolf:hover,
+        .lamb:hover {
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="left">
+        </div>
+        <div class="river">
+            <div class="board"></div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
